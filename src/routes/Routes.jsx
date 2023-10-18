@@ -6,12 +6,16 @@ import Register from "../pages/register/Register";
 import AddProduct from "../components/AddProduct";
 import MyCart from "../components/MyCart";
 import UpdateProduct from "../components/UpdateProduct";
+import BrandCards from "../components/BrandCards";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Routes = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:"/",
@@ -28,15 +32,28 @@ const Routes = createBrowserRouter([
         },
         {
             path:"/addProduct",
-            element:<AddProduct></AddProduct>
+            element:<PrivateRoute>
+                <AddProduct></AddProduct>
+            </PrivateRoute>
         },
         {
             path:"/updateProduct",
-            element:<UpdateProduct></UpdateProduct>
+            element:<PrivateRoute>
+                <UpdateProduct></UpdateProduct>
+            </PrivateRoute>
         },
         {
             path:"/myCart",
-            element:<MyCart></MyCart>
+            element:<PrivateRoute>
+                <MyCart></MyCart>
+            </PrivateRoute>
+        },
+        {
+            path:"/details/:brand",
+            element:<PrivateRoute>
+                <BrandCards></BrandCards>
+            </PrivateRoute>,
+            loader:()=>fetch ('http://localhost:5000/products')
         }
       ]
     },

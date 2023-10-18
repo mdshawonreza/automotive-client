@@ -1,7 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 
 const Navbar = () => {
+    const { user,logOut } = useContext(AuthContext)
+    
+   
+    
+
+
+    const handleLogOut=()=>{
+        logOut()
+        .then()
+        .catch()
+    }
    
         const navLinks = <>
             <li><NavLink to="/" className="text-lg  font-medium">Home</NavLink></li>
@@ -12,7 +25,7 @@ const Navbar = () => {
             
         </>
     return (
-        <div className="navbar bg-base-100 pt-1 pb-1 px-4 md:px-10 border-b-2 shadow-lg mb-4">
+        <div className="navbar bg-base-100 pt-1 pb-1 px-4 md:px-10 border-b-2 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,20 +46,20 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex flex-col-reverse md:flex-row">
-                {/* <div className=" flex items-center">
+                <div className=" flex items-center">
                     {
                         user && <img className="rounded-full w-5 md:w-9 mr-1    " src={user?.photoURL} alt="" />
                     }
                     {
                         user && <span className="mr-3 text-xs md:text-sm font-medium">{user?.displayName}</span>
                     }
-                </div> */}
-                {/* {
+                </div>
+                {
                     user ?
                         <button onClick={handleLogOut} className="btn btn-active bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white font-semibold text-xs md:text-base">sign out </button>
                         :
                         <Link to="/login"  > <button className="btn btn-active bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white font-semibold text-xs md:text-base">Login </button> </Link>
-                } */}
+                }
             </div>
         </div>
     );
