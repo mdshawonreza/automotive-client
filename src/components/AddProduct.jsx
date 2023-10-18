@@ -58,7 +58,7 @@ const AddProduct = () => {
         <div className="bg-[#F4F3F0] max-w-6xl mx-auto  p-24">
             <h2 className="text-center text-4xl font-bold mb-8" >Add a Product</h2>
             <form onSubmit={handleAddProduct}>
-                {/* form coffee name and quantity row */}
+                {/* form Product Name and Brand Name row */}
                 <div className="md:flex mb-6 ">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -79,7 +79,7 @@ const AddProduct = () => {
                         </label>
                     </div>
                 </div>
-                {/* form supplier and taste row */}
+                {/* form Type and Price row */}
                 <div className="md:flex mb-6 ">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -100,7 +100,7 @@ const AddProduct = () => {
                         </label>
                     </div>
                 </div>
-                {/* form category and details row */}
+                {/* form Short description and Rating row */}
                 <div className="md:flex mb-6 ">
                     <div className="form-control md:w-1/2">
                         <label className="label">
