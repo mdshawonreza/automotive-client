@@ -1,8 +1,12 @@
-# React + Vite
+# Automotive project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project features in this project:
 
-Currently, two official plugins are available:
+- At first i create a layout route in this automotive project and there was a fixed nav bar with 5 route which were home, login, register, add product and my cart.
+- In this project ,home page have 6 services cards ,a awesome banner ,and share your plan section.
+- brands card has a specific brand name and when it was clicked by a registered user than it show brand products.
+- And add product page have some input fields to input data for upload products and every single product has a updated button and a details button.
+- if admin click this update button then he or she can update any products information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live link in this project:
+- 
