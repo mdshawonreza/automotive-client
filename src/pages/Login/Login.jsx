@@ -54,7 +54,7 @@ const Login = () => {
         <div className="hero min-h-[780px] md:min-h-screen ">
             <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login <span className="text-pink-600">now</span>!</h1>
+                    <h1 className="text-5xl font-bold">Login <span className="text-orange-500">now</span>!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-[350px] md:w-[500px] max-w-sm shadow-2xl bg-base-100">
                     {
@@ -77,7 +77,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary  bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white px-2 py-2 font-semibold text-xl w-full rounded-lg">Login</button>
+                            <button className="btn btn-primary  bg-orange-600 hover:bg-orange-700 border-orange-700  hover:border-orange-700  text-white px-2 py-2 font-semibold text-xl w-full rounded-lg">Login</button>
                         </div>
                     </form>
                     <p className="text-center font-medium -mt-4 mb-2">New here ? please
@@ -86,7 +86,7 @@ const Login = () => {
                         </Link>
                     </p>
                     <div className="flex justify-center">
-                        <button onClick={handleSignInWithGoogle} className=" pl-6 pr-3 py-1 text-lg font-semibold border-2 border-white hover:border-pink-600  hover:border-2 rounded-md hover:text-pink-500 w-36 mb-3">
+                        <button onClick={handleSignInWithGoogle} className=" pl-6 pr-3 py-1 text-lg font-semibold border-2 border-white hover:border-orange-400  hover:border-2 rounded-md hover:text-orange-600 w-36 mb-3">
                             <div className="flex items-center gap-2">
                                 <FaGoogle></FaGoogle>
                                 <p>Google</p>

@@ -12,7 +12,7 @@ const BrandCard = ({ brand }) => {
 
 
                 <Link to={`/details/${brand_name}`}>
-                <h2 className="card-title">{brand_name}</h2>
+                <h2 className=" text-2xl font-bold hover:text-orange-600 text-center">{brand_name}</h2>
                 </Link>
                
                

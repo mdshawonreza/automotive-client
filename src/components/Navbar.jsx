@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import logo from "../assets/logo.png"
 
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
             
         </>
     return (
-        <div className="navbar bg-base-100 pt-1 pb-1 px-4 md:px-10 border-b-2 ">
+        <div className="navbar bg-base-100 pt-1  px-4 md:px-10 border-b-2 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,9 +36,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="flex items-center gap-2">
-                    {/* <img className="w-[200px] md:w-[260px] " src={logo} alt="" /> */}
-                    <h2 className="text-3xl font-bold">Automotive</h2>
+                <div className="flex items-center gap-2 pl-4">
+                    <img className="w-[150px] md:w-[200px]  " src={logo} alt="" />
+                    {/* <h2 className="text-3xl font-bold">Automotive</h2> */}
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -56,9 +57,9 @@ const Navbar = () => {
                 </div>
                 {
                     user ?
-                        <button onClick={handleLogOut} className="btn btn-active bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white font-semibold text-xs md:text-base">sign out </button>
+                        <button onClick={handleLogOut} className="btn btn-outline btn-success text-base font-medium">sign out </button>
                         :
-                        <Link to="/login"  > <button className="btn btn-active bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white font-semibold text-xs md:text-base">Login </button> </Link>
+                        <Link to="/login"  > <button className="btn btn-outline btn-success text-lg font-medium">Login </button> </Link>
                 }
             </div>
         </div>

@@ -53,7 +53,7 @@ const Register = () => {
         <div className="hero min-h-[780px] md:min-h-[60vh] ">
             <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register <span className="text-pink-600">now</span>!</h1>
+                    <h1 className="text-5xl font-bold">Register <span className="text-orange-500">now</span>!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-[350px] md:w-[500px]  shadow-2xl bg-base-100">
                     {
@@ -93,7 +93,7 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-2">
-                            <button className="block bg-pink-600  hover:bg-pink-700 hover:border-pink-700 text-white px-2 py-2 font-semibold text-xl w-full rounded-lg">Register</button>
+                            <button className="block bg-orange-600  hover:bg-orange-700 hover:border-orange-700 text-white px-2 py-2 font-semibold text-xl w-full rounded-lg">Register</button>
                         </div>
                     </form>
 
