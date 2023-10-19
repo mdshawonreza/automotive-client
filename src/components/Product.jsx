@@ -25,7 +25,9 @@ const Product = ({ product }) => {
                 <div className='flex items-end'>
                     <div className='space-y-3 pr-4 flex flex-col '>
                         <div className="card-actions  ">
-                            <button className="btn btn-primary">Details</button>
+                                <Link to={`/detail/${_id}`}>
+                                <button className="btn btn-primary">Details</button>
+                                </Link>
                         </div>
                         <div className="card-actions ">
                             <Link to={`/updateProduct/${_id}`}>

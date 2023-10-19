@@ -9,6 +9,7 @@ import UpdateProduct from "../components/UpdateProduct";
 import BrandCards from "../components/BrandCards";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import Details from "../components/Details";
 
 
 const Routes = createBrowserRouter([
@@ -20,7 +21,7 @@ const Routes = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home> ,
-            loader:()=>fetch('/public/brands.json')
+            loader:()=>fetch('http://localhost:5000/brands')
         },
         {
             path:"/login",
@@ -44,6 +45,13 @@ const Routes = createBrowserRouter([
             loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
         },
         {
+            path:"/detail/:id",
+            element:<PrivateRoute>
+                <Details></Details>
+            </PrivateRoute>,
+            loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        },
+        {
             path:"/myCart",
             element:<PrivateRoute>
                 <MyCart></MyCart>
@@ -53,8 +61,7 @@ const Routes = createBrowserRouter([
             path:"/details/:brand",
             element:<PrivateRoute>
                 <BrandCards></BrandCards>
-            </PrivateRoute>,
-            loader:()=>fetch('/public/brands.json')
+            </PrivateRoute>
            
         }
       ]

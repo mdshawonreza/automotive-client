@@ -8,7 +8,7 @@ import ShareYourPlan from "../../components/ShareYourPlan";
 
 const Home = () => {
     const brands = useLoaderData()
-    console.log(brands)
+    
     return (
         <div>
             <Header></Header>
