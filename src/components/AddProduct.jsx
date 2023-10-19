@@ -3,42 +3,42 @@ import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
-    const handleAddProduct=event=>{
+    const handleAddProduct = event => {
 
         event.preventDefault();
-        const form=event.target;
+        const form = event.target;
 
-        const productName=form.productName.value;
-        const brandName=form.brandName.value;
-        const type=form.type.value;
-        const price=form.price.value;
-        const shortDescription=form.shortDescription.value;
-        const rating=form.rating.value;
-        const photo=form.photo.value;
+        const productName = form.productName.value;
+        const brandName = form.brandName.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const shortDescription = form.shortDescription.value;
+        const rating = form.rating.value;
+        const photo = form.photo.value;
 
-        const newProduct={productName,brandName,type,price,shortDescription,rating,photo};
+        const newProduct = { productName, brandName, type, price, shortDescription, rating, photo };
 
         console.log(newProduct)
-        fetch('http://localhost:5000/products',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(newProduct)
+            body: JSON.stringify(newProduct)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Product Added successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-                  form.reset()
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    form.reset()
+                }
+            })
     }
 
     // const newBrand={
@@ -90,6 +90,16 @@ const AddProduct = () => {
                             <input type="text" name="type" placeholder="Enter Type" className="input input-bordered w-full" />
                         </label>
                     </div>
+                    {/* <div className="form-control  md:w-1/2">
+                        <div className="input-group">
+                            <select className="select select-bordered w-full">
+                                <option disabled selected>Pick category</option>
+                                <option>T-shirts</option>
+                                <option>Mugs</option>
+                            </select>
+                           
+                        </div>
+                    </div> */}
                     <div className="form-control ml-4  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Price</span>

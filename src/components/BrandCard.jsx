@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const BrandCard = ({ brand }) => {
-    const { brandName, photo } = brand
+    const {_id, brandName, photo } = brand
 
 
     return (
@@ -14,6 +14,9 @@ const BrandCard = ({ brand }) => {
                 <Link to={`/details/${brandName}`}>
                 <h2 className=" text-2xl font-bold hover:text-orange-600 text-center">{brandName}</h2>
                 </Link>
+                {/* <Link to={`/details/${_id}`}>
+                <h2 className=" text-2xl font-bold hover:text-orange-600 text-center">{brandName}</h2>
+                </Link> */}
                
                
             </div>
