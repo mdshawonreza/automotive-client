@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { _id, photo, brandName, productName, shortDescription, price } = product
+    const { _id, photo, productName, shortDescription, price } = product
 
 
     return (

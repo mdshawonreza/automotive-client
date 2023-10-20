@@ -7,7 +7,7 @@ const ShareYourPlan = () => {
     return (
         <div className="bg-base-200">
             <h2 className='text-center text-3xl font-bold pt-16'>Feel comfort to share  <span className='text-orange-500'>your plan </span></h2>
-            <p className='text-center font-medium text-gray-500 mt-3'> Feel at ease to discuss your plans and ideas with confidence,we're here to support and <br />help you turn your dreams into reality..</p>
+            <p className='text-center font-medium text-gray-500 mt-3'> Feel at ease to discuss your plans and ideas with confidence,we are here to support and <br />help you turn your dreams into reality..</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-4 md:pb-14">
                 <div className="card   ">
                     <figure className="px-10 pt-10">
@@ -20,7 +20,7 @@ const ShareYourPlan = () => {
                     </div>
                     <div className="card-body items-center text-center -mt-3">
                         <h2 className="card-title">SHARE YOUR PLANS</h2>
-                        <p className=' text-gray-500'>Share your vision, and together, we'll shape a future filled with success and happiness</p>
+                        <p className=' text-gray-500'>Share your vision, and together, we all shape a future filled with success and happiness</p>
                         <div className="card-actions mt-4">
                             <button className="btn btn-outline hover:bg-gray-500 ">Details</button>
                         </div>

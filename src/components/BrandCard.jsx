@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const BrandCard = ({ brand }) => {
-    const {_id, brandName, photo } = brand
+    const { brandName, photo } = brand
 
 
     return (
@@ -14,9 +14,7 @@ const BrandCard = ({ brand }) => {
                 <Link to={`/details/${brandName}`}>
                 <h2 className=" text-2xl font-bold hover:text-orange-600 text-center">{brandName}</h2>
                 </Link>
-                {/* <Link to={`/details/${_id}`}>
-                <h2 className=" text-2xl font-bold hover:text-orange-600 text-center">{brandName}</h2>
-                </Link> */}
+                
                
                
             </div>
@@ -25,3 +23,6 @@ const BrandCard = ({ brand }) => {
 };
 
 export default BrandCard;
+BrandCard.propTypes={
+    brand:PropTypes.object
+}
