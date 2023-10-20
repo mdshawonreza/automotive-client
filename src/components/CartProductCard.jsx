@@ -52,6 +52,7 @@ const CartProductCard = ({ cartNowProduct,cartNowProducts,setCartNowProducts }) 
                 <div className="">
                     <button onClick={() => handleDelete(_id)} className="btn btn-xs btn-outline btn-error w-20">Delete</button>
                 </div>
+                
 
             </div>
         </div>

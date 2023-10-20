@@ -100,7 +100,7 @@ const Register = () => {
 
                         <p className="text-center font-medium -mt-8 mb-4">Already Register ? please
                             <Link to="/login">
-                                <button className="btn btn-link">Login</button>
+                                <button className="btn btn-link ">Login</button>
                             </Link>
                         </p>
 
