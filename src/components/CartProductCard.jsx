@@ -21,7 +21,7 @@ const CartProductCard = ({ cartNowProduct,cartNowProducts,setCartNowProducts }) 
         }).then((result) => {
             if (result.isConfirmed) {
                 
-                fetch(` http://localhost:5000/cartProducts/${_id}`, {
+                fetch(` https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/cartProducts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -45,7 +45,7 @@ const CartProductCard = ({ cartNowProduct,cartNowProducts,setCartNowProducts }) 
     }
     return (
         <div className="card card-compact h-72  bg-base-100 shadow-xl">
-            <figure> <img className="h-44  " src={photo} alt="Shoes" /></figure>
+            <figure> <img className="h-36  " src={photo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className=" text-lg font-bold text-orange-600 ">Brand : {brandName}</h2>
                 <p className="text-gray-500 text-base font-normal"> <span className="text-base font-bold">Product : </span>{productName} </p>

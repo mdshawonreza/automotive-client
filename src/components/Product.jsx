@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { _id, photo, productName, shortDescription, price,rating } = product
+    const { _id, photo, productName, shortDescription, price,rating,type } = product
 
 
     return (
@@ -35,6 +35,7 @@ const Product = ({ product }) => {
                     
                     <p className='text-lg text-gray-400'>{shortDescription}</p>
                     <p className='text-xl font-medium'>Price: $ <span className='text-orange-500'>{price}</span></p>
+                    <p>Products Type:{type}</p>
                 </div>
                 <div className='flex items-end'>
 

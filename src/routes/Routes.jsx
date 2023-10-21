@@ -21,7 +21,7 @@ const Routes = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home> ,
-            loader:()=>fetch('http://localhost:5000/brands')
+            loader:()=>fetch('https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/brands')
         },
         {
             path:"/login",
@@ -42,21 +42,21 @@ const Routes = createBrowserRouter([
             element:<PrivateRoute>
                 <UpdateProduct></UpdateProduct>
             </PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+            loader:({params})=>fetch(`https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/products/${params.id}`)
         },
         {
             path:"/detail/:id",
             element:<PrivateRoute>
                 <Details></Details>
             </PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+            loader:({params})=>fetch(`https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/products/${params.id}`)
         },
         {
             path:"/myCart",
             element:<PrivateRoute>
                 <MyCart></MyCart>
             </PrivateRoute>,
-            loader:()=>fetch('http://localhost:5000/cartProducts')
+            loader:()=>fetch('https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/cartProducts')
         },
         {
             path:"/details/:brand",

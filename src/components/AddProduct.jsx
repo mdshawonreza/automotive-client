@@ -10,6 +10,7 @@ const AddProduct = () => {
 
         const productName = form.productName.value;
         const brandName = form.brandName.value;
+        // const brandName=brandNameValue.toUpperCase()
         const type = form.type.value;
         const price = form.price.value;
         const shortDescription = form.shortDescription.value;
@@ -19,7 +20,7 @@ const AddProduct = () => {
         const newProduct = { productName, brandName, type, price, shortDescription, rating, photo };
 
         console.log(newProduct)
-        fetch('http://localhost:5000/products', {
+        fetch('https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,26 +42,14 @@ const AddProduct = () => {
             })
     }
 
-    // const newBrand={
-
-    // }
-    // fetch('http://localhost:5000/products',{
-    //     method:'POST',
-    //     headers:{
-    //         'content-type':'application/json'
-    //     },
-    //     body:JSON.stringify(newBrand)
-    // })
-    // .then(res=>res.json())
-    // .then(data=>{
-    //     console.log(data)})
+    
     return (
-        <div className="bg-[#F4F3F0] max-w-6xl mx-auto  p-24">
-            <h2 className="text-center text-4xl font-bold mb-8" >Add a Product</h2>
+        <div className="bg-[#F4F3F0] max-w-6xl mx-auto p-14 md:p-24">
+            <h2 className="text-center text-3xl font-bold mb-8" >Add a Product</h2>
             <form onSubmit={handleAddProduct}>
                 {/* form Product Name and Brand Name row */}
                 <div className="md:flex mb-6 ">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Product Name</span>
                         </label>
@@ -69,7 +58,7 @@ const AddProduct = () => {
                             <input type="text" name="productName" placeholder="Enter product name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
@@ -100,7 +89,7 @@ const AddProduct = () => {
                            
                         </div>
                     </div> */}
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4 md:w-1/2">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
@@ -121,7 +110,7 @@ const AddProduct = () => {
                             <input type="text" name="shortDescription" placeholder="Enter short description" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>

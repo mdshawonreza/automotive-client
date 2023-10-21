@@ -26,7 +26,7 @@ const UpdateProduct = () => {
         const updateProduct = { productName, brandName, type, price, shortDescription, rating, photo };
 
         console.log(updateProduct)
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -50,8 +50,8 @@ const UpdateProduct = () => {
 
 
     return (
-        <div className="bg-[#F4F3F0] max-w-6xl mx-auto  p-24">
-            <h2 className="text-center text-4xl font-bold mb-8" >Update {productName} Product</h2>
+        <div className="bg-[#F4F3F0] max-w-6xl mx-auto p-14 md:p-24">
+            <h2 className="text-center text-2xl md:text-4xl font-bold mb-8" >Update {productName} Product</h2>
             <form onSubmit={handleUpdateProduct}>
                 {/* form Product Name and Brand Name row */}
                 <div className="md:flex mb-6 ">
@@ -64,7 +64,7 @@ const UpdateProduct = () => {
                             <input type="text" name="productName" defaultValue={productName} placeholder="Enter product name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
@@ -85,7 +85,7 @@ const UpdateProduct = () => {
                             <input type="text" name="type" defaultValue={type} placeholder="Enter Type" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
@@ -106,7 +106,7 @@ const UpdateProduct = () => {
                             <input type="text" name="shortDescription" defaultValue={shortDescription} placeholder="Enter short description" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control ml-4  md:w-1/2">
+                    <div className="form-control md:ml-4 md:w-1/2">
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>

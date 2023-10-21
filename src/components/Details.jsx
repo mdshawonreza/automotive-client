@@ -10,7 +10,7 @@ const Details = () => {
         console.log(id)
         const addCartProduct={photo,brandName,productName, shortDescription,price }
         console.log(addCartProduct)
-        fetch('http://localhost:5000/cartProducts',{
+        fetch('https://automotive-server-47ir5l0ph-md-shawon-rezas-projects.vercel.app/cartProducts',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -35,10 +35,10 @@ const Details = () => {
     return (
         <div className="bg-base-200 py-10">
             <div className=" flex justify-center items-center  " >
-                <div className="relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md w-[55%]">
+                <div className="relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md w-[90%] md:w-[55%]">
                     <div className=" flex justify-center relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
                         <img
-                            className="w-full h-[50vh] rounded-t-lg"
+                            className="w-full md:h-[50vh] rounded-t-lg"
                             src={photo}
                             alt="ui/ux review check"
                         />
